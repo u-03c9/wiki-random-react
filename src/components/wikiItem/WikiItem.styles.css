@@ -6,13 +6,31 @@
   text-align: center;
 }
 
+.item__title_container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item__title {
+  color: var(--color-primary-variant);
+  font-size: 2rem;
+}
+
 .item__image_container {
-  margin: 0 auto;
+  margin-top: 2rem;
 }
 
 .item__image {
-  width: 250px;
-  height: 250px;
+  height: 350px;
   background-position: center;
   background-size: cover;
+}
+
+.item__extract {
+  margin-top: 1rem;
+  padding: 0 3rem;
 }

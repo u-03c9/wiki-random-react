@@ -12,17 +12,23 @@ const WikiItem = ({ wikiItem }: PropsWithChildren<Props>) => {
 
   return (
     <div className="item">
+      <div className="item__title_container">
+        <h2 className="item__title">{title}</h2>
+        <span>
+          [
+          <a href={sourceUrl} target="_blank">
+            src
+          </a>
+          ]
+        </span>
+      </div>
       <a href={image} target="_blank" className="item__image_container">
         <div
           className="item__image"
           style={{ backgroundImage: `url('${thumbnail}')` }}
         />
       </a>
-      <div>{title}</div>
-      <div>{extract}</div>
-      <a href={sourceUrl} target="_blank">
-        source
-      </a>
+      <div className="item__extract">{extract}</div>
     </div>
   );
 };
