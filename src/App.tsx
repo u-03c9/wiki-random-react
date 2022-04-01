@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchRandomWikiItem, WikiItemInterface } from "./api/wikiItem.api";
+import WikiItem from "./components/wikiItem/WikiItem.comp";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +28,7 @@ function App() {
       <button onClick={handleClick}>Fetch new Wiki Item</button>
       <div>
         {wikiItems.map((item) => (
-          <div key={item.id}>{item.title}</div>
+          <WikiItem wikiItem={item} key={item.id} />
         ))}
       </div>
     </>
